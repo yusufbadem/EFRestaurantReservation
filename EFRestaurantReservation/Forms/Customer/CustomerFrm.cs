@@ -75,15 +75,15 @@ public partial class CustomerFrm : Form
 
     private void dgvCustomer_CellContentClick(object sender, DataGridViewCellEventArgs e)
     {
-        EFRestaurantReservationContext context = new EFRestaurantReservationContext();
-        int SelectedId = Convert.ToInt32(dgvCustomer.CurrentRow.Cells["Id"].Value);
-        Customer customer = context.Customers.FirstOrDefault(x => x.Id == SelectedId);
+    //    EFRestaurantReservationContext context = new EFRestaurantReservationContext();
+    //    int SelectedId = Convert.ToInt32(dgvCustomer.CurrentRow.Cells["Id"].Value);
+    //    Customer customer = context.Customers.FirstOrDefault(x => x.Id == SelectedId);
 
-        txtName.Text = customer.Name;
-        txtSurname.Text = customer.Surname;
-        txtEmail.Text = customer.EMail;
-        txtPhone.Text = customer.Phone;
-        txtAddress.Text = customer.Address;
+        //txtName.Text = customer.Name;
+        //txtSurname.Text = customer.Surname;
+        //txtEmail.Text = customer.EMail;
+        //txtPhone.Text = customer.Phone;
+        //txtAddress.Text = customer.Address;
     }
 
     private void btnUpdate_Click(object sender, EventArgs e)
@@ -120,12 +120,12 @@ public partial class CustomerFrm : Form
         int SelectedId = Convert.ToInt32(dgvCustomer.CurrentRow.Cells["Id"].Value);
         Customer customer = context.Customers.FirstOrDefault(x => x.Id == SelectedId);
 
-       
+
         txtName.Text = customer.Name;
-        txtSurname.Text= customer.Surname;
+        txtSurname.Text = customer.Surname;
         txtEmail.Text = customer.EMail;
         txtPhone.Text = customer.Phone;
-        txtAddress.Text= customer.Address;
+        txtAddress.Text = customer.Address;
 
         /*
          * Aynı kişiden varsa güncelleme

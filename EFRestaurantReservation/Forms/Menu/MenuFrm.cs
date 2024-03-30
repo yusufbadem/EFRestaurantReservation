@@ -22,7 +22,7 @@ public partial class MenuFrm : Form
     {
         try
         {
-            EFRestaurantReservationContext context = new EFRestaurantReservationContext();
+            //EFRestaurantReservationContext context = new EFRestaurantReservationContext();
 
             Menu menu = new Menu();
             menu.Title = txtTitle.Text.Trim();

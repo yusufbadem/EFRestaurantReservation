@@ -10,6 +10,8 @@ namespace EFRestaurantReservation.Models;
 public class Reservation:BaseEntity
 {
     public DateTime ReservationDate { get; set; }
+    public string? NameSurname { get; set; }
+    public string Notes { get; set; }
     public int CustomerId { get; set; }
     [ForeignKey("CustomerId")]
     public Customer Customer { get; set; }

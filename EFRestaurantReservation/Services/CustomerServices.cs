@@ -29,6 +29,13 @@ public class CustomerServices
 
     }
 
+    public Customer GetById(int id)
+    {
+        EFRestaurantReservationContext ctx=new EFRestaurantReservationContext();
+
+        return ctx.Customers.FirstOrDefault(c=>c.Id==id);
+    }
+
     public void DeleteCustomer(int id)
     {
         EFRestaurantReservationContext context = new EFRestaurantReservationContext();
